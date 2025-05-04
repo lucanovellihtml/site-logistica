@@ -29,7 +29,7 @@
     <header>
 
         <!-- nav -->
-        <nav class="navbar bg-transparent">
+        <nav class="navbar bg-transparent text-white">
             <div class="container-fluid justify-content-lg-center">
 
                 <!-- icon -->
@@ -167,7 +167,8 @@
                     <button
                         class="navbar-toggler rounded-4 bg-info d-flex gap-2 align-items-center justify-content-between"
                         type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                        id="openMenuBtn">
 
                         <!-- span -->
                         <span class="text-white">MENU</span>
@@ -186,26 +187,17 @@
                 <!-- menu button -->
                 <div class="collapse navbar-collapse fullscreen-menu" id="navbarNavAltMarkup">
 
-                    <div class="position-absolute top-50 start-50 translate-middle w-100" style="max-width: 2000px;">
+                    <div class="position-absolute text-center top-50 start-50 translate-middle w-100"
+                        style="max-width: 2000px;">
 
                         <!-- list page -->
-                        <div class="text-center d-lg-flex gap-3 mt-5 justify-content-center">
-                            <a class="nav-link py-1" href="#">
-                                <h2 class="text-white">Chi siamo</h2>
-                            </a>
-                            <a class="nav-link py-1" href="#">
-                                <h2 class="text-white">Servizi</h2>
-                            </a>
-                            <a class="nav-link py-1" href="#">
-                                <h2 class="text-white">Testimonianze</h2>
-                            </a>
-                            <a class="nav-link py-1" href="#">
-                                <h2 class="text-white">Contatti</h2>
-                            </a>
-                            <a class="nav-link py-1" href="#">
-                                <h2 class="text-white">FAQ</h2>
-                            </a>
-                        </div>
+                        <ul class="menu-items d-lg-flex gap-3 mt-5 justify-content-center">
+                            <li><a href="#">Chi siamo</a></li>
+                            <li><a href="#">Servizi</a></li>
+                            <li><a href="#">Testimonianze</a></li>
+                            <li><a href="#">Contatti</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
 
                         <!-- icon rotate -->
                         <div class="text-center my-3">
@@ -378,3 +370,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
+
+<!-- script fullscreen menu header -->
+<script src="/js/header/scrip-fullscreen-menu.js" type=""></script>
