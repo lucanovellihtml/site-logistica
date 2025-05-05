@@ -16,6 +16,12 @@
     }
 }
 
+/* style h1 intro */
+#titleIntro {
+    font-size: 35px;
+    max-width: 480px;
+}
+
 /* animation background-color title intro */
 mark {
     background-image: linear-gradient(to right, transparent 0%, #2acff2 100%);
