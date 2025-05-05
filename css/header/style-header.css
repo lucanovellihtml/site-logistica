@@ -96,6 +96,26 @@ h4 {
     text-decoration: none;
 }
 
+/* animazione dell'icon nav, list address e list social del full screen */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.fullscreen-menu.open .fade-in-off {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* icon nav white */
 .immagine-rotante {
     animation: rotazione 10s linear infinite;
