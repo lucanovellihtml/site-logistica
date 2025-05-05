@@ -1,0 +1,45 @@
+/* ---- section intro ---- */
+/* icon nav white */
+.immagine-rotante-intro {
+    animation: rotazione 10s linear infinite;
+    max-width: 200px;
+    height: auto;
+}
+
+@keyframes rotazione {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* animation background-color title intro */
+mark {
+    background-image: linear-gradient(to right, transparent 0%, #2acff2 100%);
+    background-size: 200% 100%;
+    /* Larghezza doppia per l'animazione */
+    background-position: 0% 0%;
+    /* Inizia a sinistra */
+    color: black;
+    /* Applica l'animazione */
+    animation: animate 0.7s ease-in-out forwards;
+    background-color: transparent;
+    line-height: 2;
+}
+
+@keyframes animate {
+
+    /* Inizia completamente a sinistra (invisibile) */
+    0% {
+        background-position: 0% 0%;
+    }
+
+    /* Finisce a destra (visibile) */
+    100% {
+        background-position: -100% 0%;
+    }
+
+}
