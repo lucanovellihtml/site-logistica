@@ -29,7 +29,7 @@ mark {
     /* Larghezza doppia per l'animazione */
     background-position: 0% 0%;
     /* Inizia a sinistra */
-    color: black;
+    color: white;
     /* Applica l'animazione */
     animation: animate 0.7s ease-in-out forwards;
     background-color: transparent;
@@ -48,4 +48,30 @@ mark {
         background-position: -100% 0%;
     }
 
+}
+
+/* style video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1800px;
+    max-height: 700px;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.5;
+}
+
+/* style color opacity background */
+.color-opacity-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.863) 5%, rgba(0, 0, 0, 0.2) 30%, rgb(7 88 181 / 75%));
+    pointer-events: none;
 }
