@@ -34,7 +34,8 @@
 
                 <!-- icon -->
                 <a class="navbar-brand col-lg-6 text-lg-end navbar-position" href="#">
-                    <img src="img/icon/logo-navbar-logistic.png" class="w-100 class-icon-nav" alt="Logo logistica">
+                    <img src="img/icon/logo-navbar-logistic.png" class="w-100 class-icon-nav" alt="Logo logistica"
+                        id="imgLogoNavbar">
                 </a>
 
                 <!-- div button menu/list social display large -->
@@ -367,38 +368,73 @@
     <main>
 
         <!-- section intro -->
-        <div class="container">
-            <div class="row">
+        <div>
 
-                <!-- col icon rotate -->
-                <div class="col-12 text-center my-3">
+            <!-- video background -->
+            <video autoplay loop muted class="video-background">
+                <source src="/video/background/video-background-intro.mp4" type="video/mp4">
+            </video>
 
-                    <!-- icon rotate -->
-                    <img src="img/icon/logo-navbar-withe.png" class="immagine-rotante-intro"
-                        alt="Logo logistica bianco intro">
+            <!-- color background -->
+            <div class="color-opacity-background"></div>
+
+            <!-- container intro -->
+            <div class="container z-1 text-white">
+                <div class="row">
+
+                    <!-- col icon rotate -->
+                    <div class="col-12 text-center my-3">
+
+                        <!-- icon rotate -->
+                        <img src="img/icon/logo-navbar-withe.png" class="immagine-rotante-intro"
+                            alt="Logo logistica bianco intro">
+
+                    </div>
+
+                    <!-- col title  -->
+                    <div class="col-12 text-center my-3 d-flex justify-content-center">
+
+                        <!-- title -->
+                        <h1 id="titleIntro" class="fw-bold">
+                            La Logistica Smart per l'E-commerce del Futuro
+                        </h1>
+
+                    </div>
+
+                    <!-- col title -->
+                    <div class="col-12 text-center my-3">
+
+                        <!-- title -->
+                        <h6 class="fw-bold">Dal magazzino alla consegna, tutto sotto controllo.</h6>
+
+                    </div>
+
+                    <!-- col button -->
+                    <div class="col-12 text-center my-3">
+
+                        <!-- button -->
+                        <button type="button" class="btn btn-outline-info button-intro rounded-pill">
+
+                            <!-- span -->
+                            <span class="ms-3">Contattaci</span>
+
+                            <!-- svg -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                class="bi bi-arrow-right-circle-fill ms-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                            </svg>
+
+                        </button>
+
+                    </div>
 
                 </div>
-
-                <!-- col title  -->
-                <div class="col-12 text-center my-3 d-flex justify-content-center">
-
-                    <!-- title -->
-                    <h1 id="titleIntro" class="fw-bold">
-                        La Logistica Smart per l'E-commerce del Futuro
-                    </h1>
-
-                </div>
-
-                <!-- col title -->
-                <div class="col-12 text-center my-3">
-
-                    <!-- title -->
-                    <h6 class="fw-bold">Dal magazzino alla consegna, tutto sotto controllo.</h6>
-
-                </div>
-
             </div>
+
         </div>
+
+
 
     </main>
 
@@ -412,7 +448,10 @@
     crossorigin="anonymous"></script>
 
 <!-- script fullscreen menu header -->
-<script src="/js/header/scrip-fullscreen-menu.js" type=""></script>
+<script src="/js/header/script-fullscreen-menu.js" type=""></script>
+
+<!-- script changed logo icon navbar -->
+<script src="/js/header/script-scrolling-change-icon.js" type=""></script>
 
 <!-- script mark -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
