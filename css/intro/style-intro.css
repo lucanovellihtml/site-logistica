@@ -1,3 +1,9 @@
+/* ---- body ---- */
+.style-svg-animation-lottie {
+    width: 100%;
+    height: auto;
+}
+
 /* ---- section intro ---- */
 /* icon nav white */
 .immagine-rotante-intro {
@@ -81,11 +87,6 @@ mark {
 }
 
 /* ---- section chi siamo ---- */
-.style-svg-logistic-chi-siamo {
-    width: 100%;
-    height: auto;
-}
-
 .img-icon {
     width: 60px;
     height: auto;
