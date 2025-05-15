@@ -79,3 +79,14 @@ mark {
     --bs-btn-color: white;
     --bs-btn-border-color: white;
 }
+
+/* ---- section chi siamo ---- */
+.style-svg-logistic-chi-siamo {
+    width: 100%;
+    height: auto;
+}
+
+.img-icon {
+    width: 60px;
+    height: auto;
+}
