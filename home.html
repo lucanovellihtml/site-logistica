@@ -435,7 +435,7 @@
         </section>
 
         <!-- section chi siamo-->
-        <section>
+        <section class="my-5">
 
             <!-- container chi siamo -->
             <div class="container">
@@ -494,7 +494,7 @@
         </section>
 
         <!-- section dove siamo -->
-        <section>
+        <section class="my-5">
 
             <!-- container dove siamo -->
             <div class="container">
@@ -547,6 +547,67 @@
 
         </section>
 
+        <!-- section numbers -->
+        <section class="my-5">
+
+            <!-- container dove siamo -->
+            <div class="container">
+                <div class="row gap-4" id="boxElement">
+
+                    <!-- col title -->
+                    <div class="col-12 text-center">
+
+                        <!-- title -->
+                        <h6 class="fw-bold">I NOSTRI NUMERI</h6>
+
+                        <!-- title -->
+                        <h1 class="fw-bold">Lavoriamo per Garantire il Massimo del Servizio.</h1>
+
+                    </div>
+
+                    <!-- col counter daily -->
+                    <div class="col-12 text-center" id="boxCounterDaily">
+
+                        <!-- title -->
+                        <h2 class="fw-bold">
+                            <span id="counterDaily">0</span>+
+                        </h2>
+
+                        <!-- title -->
+                        <h6 class="text-secondary">Spedizioni Giornaliere</h6>
+
+                    </div>
+
+                    <!-- col counter shipping -->
+                    <div class="col-12 text-center" id="boxCounterShipping">
+
+                        <!-- title -->
+                        <h2 class="fw-bold">
+                            +<span id="counterShipping">0</span>%
+                        </h2>
+
+                        <!-- title -->
+                        <h6 class="text-secondary">Tasso Di Consegna</h6>
+
+                    </div>
+
+                    <!-- col counter warehouse -->
+                    <div class="col-12 text-center" id="boxCounterWarehouse">
+
+                        <!-- title -->
+                        <h2 class="fw-bold">
+                            <span id="counterWarehouse">0</span>
+                        </h2>
+
+                        <!-- title -->
+                        <h6 class="text-secondary">mq Magazzino</h6>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 </body>
@@ -576,3 +637,8 @@
 
 <!-- script lottie player dove siamo -->
 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+<!-- script gsap section numbers -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="js/intro/script-counter-gsap.js"></script>
