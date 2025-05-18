@@ -91,3 +91,62 @@ mark {
     width: 60px;
     height: auto;
 }
+
+/* ---- section name ---- */
+.doppia-curva-svg {
+    /* Necessario per il posizionamento se si volesse sovrapporre altro */
+    position: relative;
+    text-align: center;
+    /* Per centrare il div nella pagina */
+}
+
+.curva-superiore {
+    display: block;
+    /* Rende l'SVG un elemento di blocco per occupare la larghezza */
+    width: 100%;
+    /* Altezza della curvatura superiore */
+    height: 100%;
+    max-height: 200px;
+    /* Sovrappone leggermente per evitare spazi indesiderati */
+    margin-bottom: -1px;
+}
+
+.contenuto {
+    background-color: #2acff2;
+    /* Colore di sfondo del contenuto */
+    padding: 20px;
+    /* Spazio interno per il testo */
+    position: relative;
+    /* Per gestire lo z-index se necessario */
+    z-index: 1;
+    /* Assicura che il contenuto sia sopra le curve se si sovrappongono */
+}
+
+.curva-inferiore {
+    display: block;
+    /* Rende l'SVG un elemento di blocco */
+    width: 100%;
+    /* Altezza della curvatura inferiore */
+    height: 100%;
+    max-height: 200px;
+    /* Sovrappone leggermente */
+    margin-top: -1px;
+}
+
+.container-name {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    min-height: 100px;
+    background-color: #2acff2;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.titolo {
+    position: relative;
+    /* Inizia il titolo fuori dallo schermo a destra */
+    left: 100%;
+    font-size: 8.5vw;
+    color: white;
+}
