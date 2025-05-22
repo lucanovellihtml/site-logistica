@@ -194,7 +194,7 @@ section .container {
     height: auto;
     max-height: 500px;
     min-height: 100px;
-    background-color: #2acff2;
+    background-color: rgb(134, 255, 65);
     white-space: nowrap;
     overflow: hidden;
 }
@@ -203,7 +203,7 @@ section .container {
     position: relative;
     /* Inizia il titolo fuori dallo schermo a destra */
     left: 100%;
-    font-size: 8.5vw;
+    font-size: 7.3vw;
     color: white;
 }
 
