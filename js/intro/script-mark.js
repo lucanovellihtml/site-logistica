@@ -9,7 +9,7 @@ const title = document.getElementById("titleIntro")
 const markInstance = new Mark(title);
 
 // Titolo da sottolineare
-const titleMarked = "La Logistica Smart per l'E-commerce del Futuro";
+const titleMarked = "Benvenuto in BV Express Logistic";
 
 markInstance.mark(titleMarked, {
     "separateWordSearch": false, // Disabilita la sottolineatura delle parole separate
