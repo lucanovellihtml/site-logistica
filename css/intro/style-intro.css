@@ -2,9 +2,32 @@
 .style-svg-animation-lottie {
     width: 100%;
     height: auto;
+    overflow-x: hidden;
+    /* Evita scroll orizzontale non voluto */
 }
 
 /* ---- section intro ---- */
+#sectionIntro {
+    position: relative;
+    /* Fondamentale: fa da riferimento per gli elementi posizionati assolutamente */
+    width: 100%;
+    /* Altezza minima: Puoi impostarla con min-height per assicurare che sia sempre grande abbastanza,
+           oppure con height: 100vh; se deve occupare l'intera altezza della viewport.
+           Se non metti altezza, si adatterà al contenuto del .container. */
+    min-height: 700px;
+    /* Esempio: altezza minima per la sezione */
+    /* Oppure: height: 100vh; per tutta l'altezza della finestra */
+    display: flex;
+    /* Permette di allineare il contenuto del container al centro */
+    align-items: center;
+    /* Centra verticalmente il contenuto del container */
+    justify-content: center;
+    /* Centra orizzontalmente il contenuto del container */
+    overflow: hidden;
+    /* Nasconde qualsiasi cosa fuoriesca da questa sezione */
+}
+
+
 /* icon nav white */
 .immagine-rotante-intro {
     animation: rotazione 10s linear infinite;
@@ -22,10 +45,8 @@
     }
 }
 
-/* style h1 intro */
 #titleIntro {
     font-size: 35px;
-    max-width: 480px;
 }
 
 /* animation background-color title intro */
@@ -56,19 +77,26 @@ mark {
 
 }
 
-/* style video background */
 .video-background {
     position: absolute;
+    /* Si posiziona rispetto alla <section> */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* Nasconde il video che "sfora" */
+    overflow: hidden;
+    /* Il più basso, dietro a tutto */
     z-index: -2;
-    opacity: 0.5;
 }
 
-/* style color opacity background */
+.video-background video {
+    width: 100%;
+    height: 100%;
+    /* Riempie il contenitore mantenendo le proporzioni, tagliando i bordi */
+    object-fit: cover;
+}
+
 .color-opacity-background {
     position: absolute;
     top: 0;
@@ -78,6 +106,34 @@ mark {
     z-index: -1;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.863) 5%, rgba(0, 0, 0, 0.2) 30%, rgb(7 88 181 / 75%));
     pointer-events: none;
+}
+
+.svg-intro {
+    /* Posizionamento rispetto alla <section> */
+    position: absolute;
+    /* Lo ancora alla parte inferiore della <section> */
+    bottom: 0;
+    left: 0;
+    /* Si estende per tutta la larghezza della <section> */
+    width: 100%;
+    /* Imposta l'altezza dell'SVG. Puoi regolarla. */
+    /* Nota: viewBox="0 0 1000 200" nell'SVG significa che la curva è definita in uno spazio alto 200.
+    Impostando height: 100px qui, la curva si adatterà proporzionalmente a questa altezza.
+    Aggiusta se vedi che la curva è troppo schiacciata o troppo alta. 
+    */
+    height: 100px;
+    /* Lo mette sopra tutti gli altri elementi di sfondo (video, overlay)
+    e anche sopra il contenuto del .container se quest'ultimo non ha z-index.
+     Se il contenuto del container si sovrappone male all'SVG, puoi giocare con questo z-index. */
+    z-index: 1;
+
+}
+
+section .container {
+    /* Necessario per assicurare che sia sopra z-index -1 e -2 */
+    position: relative;
+    z-index: 1;
+    /* Assicura che il contenuto del container sia sempre visibile sopra i background */
 }
 
 /* style button intro */
