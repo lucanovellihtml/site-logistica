@@ -257,7 +257,7 @@ section .container {
 
 #boxService .card:hover {
     /* Ombra al passaggio del mouse: azzurra */
-    box-shadow: 0 0 25px 8px rgba(0, 191, 255, 0.363);
+    box-shadow: 0 0 25px 8px rgba(0, 255, 55, 0.363);
     /* Azzurro chiaro e più intenso */
 }
 
@@ -269,8 +269,8 @@ section .container {
 }
 
 #boxService .card:hover {
-    background-color: rgba(15, 117, 250, 0.747);
-    /* Sfondo blu opaco al passaggio del mouse */
+    background-color: rgba(135, 255, 65, 0.733);
+    /* Sfondo verde opaco al passaggio del mouse */
 }
 
 #boxService .card-img-overlay {
