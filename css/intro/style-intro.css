@@ -321,10 +321,10 @@ section .container {
     border: none;
     border-bottom: 2px solid #e0e0e0;
     border-radius: 0;
-    background-color: #2acdf236;
+    background-color: rgba(135, 255, 65, 0.349);
 }
 
 .button-submit {
-    background-color: #2acff2;
+    background-color: rgb(134, 255, 65);
     color: white;
 }
