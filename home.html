@@ -1332,11 +1332,109 @@
 
         </section>
 
+        <!-- section contact -->
+        <section>
+
+            <!-- container contact -->
+            <div class="container">
+                <div class="row justify-content-center gap-5">
+
+                    <!-- col title -->
+                    <div class="col-12 d-flex flex-column gap-4 p-0 text-center">
+
+                        <!-- title -->
+                        <h6 class="fw-bold">CONTATTI</h6>
+
+                        <!-- title -->
+                        <h1 class="fw-bold">Parliamo della tua Logistica</h1>
+
+                        <!-- paragraph -->
+                        <p>
+                            Contattaci per scoprire come possiamo ottimizzare la gestione della tua logistica.
+                        </p>
+
+                    </div>
+
+                    <!-- col forum -->
+                    <div class="col-12 col-lg-8 mt-3">
+
+                        <!-- form -->
+                        <form class="row g-3" action="https://formspree.io/f/xqaqopnv" method="POST"
+                            enctype="multipart/form-data">
+
+                            <input type="hidden" name="_subject"
+                                value="Richiesta form dal sito www.bvexpresslogisticts.it">
+
+                            <!-- <input type="hidden" name="_next" value="https://tuodominio.it/grazie.html"> -->
+
+                            <!-- ragione sociale -->
+                            <div class="col-12">
+                                <label for="ragioneSociale" class="form-label fw-bold w-100">Ragione Sociale*</label>
+                                <input type="text" class="form-control form-control-new" id="ragioneSociale"
+                                    name="ragioneSociale" required>
+                                <div class="invalid-feedback">
+                                    Per favore, inserisci la ragione sociale.
+                                </div>
+                            </div>
+
+                            <!-- email -->
+                            <div class="col-12">
+                                <label for="email" class="form-label fw-bold w-100">E-mail*</label>
+                                <input type="email" class="form-control form-control-new" id="email" name="email"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Per favore, inserisci un indirizzo email valido. </div>
+                            </div>
+
+                            <!-- recapito telefonico -->
+                            <div class="col-12">
+                                <label for="telefono" class="form-label fw-bold w-100">Numero di Tel.*</label>
+                                <input type="tel" class="form-control form-control-new" id="telefono" name="telefono"
+                                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Formato: 1234567890" required>
+                                <div class="invalid-feedback">
+                                    Per favore, inserisci un numero di telefono valido (es. 1234567890). </div>
+                            </div>
+
+                            <!-- partita iva -->
+                            <div class="col-12">
+                                <label for="partitaIva" class="form-label fw-bold w-100">P.IVA</label>
+                                <input type="text" class="form-control form-control-new" id="partitaIva"
+                                    name="partitaIva">
+                            </div>
+
+                            <!-- messaggio -->
+                            <div class="col-12">
+                                <label for="messaggio" class="form-label fw-bold w-100">Messaggio</label>
+                                <textarea class="form-control form-control-new" id="messaggio" name="messaggio"
+                                    rows="5"></textarea>
+                            </div>
+
+                            <!-- button submit -->
+                            <div class="col-12">
+                                <button type="submit"
+                                    class="btn fw-bold button-submit rounded-5 px-3 py-2">INVIA</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 </body>
 
 </html>
+
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+
+<!-- script form checked -->
+<script src="js/intro/script-form-checked.js" type=""></script>
 
 <!-- script boostrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
