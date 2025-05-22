@@ -152,12 +152,12 @@ mark {
 }
 
 /* ---- section service ---- */
-swiper-container {
+#boxService swiper-container {
     width: 100%;
     height: 100%;
 }
 
-swiper-slide {
+#boxService swiper-slide {
     text-align: center;
     font-size: 18px;
     color: black;
@@ -172,7 +172,7 @@ swiper-slide {
 
 }
 
-swiper-slide img {
+#boxService swiper-slide img {
     display: block;
     width: 100%;
     max-width: 450px;
@@ -181,37 +181,37 @@ swiper-slide img {
     opacity: 0.0;
 }
 
-.card {
+#boxService .card {
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.card:hover {
+#boxService .card:hover {
     /* Ombra al passaggio del mouse: azzurra */
     box-shadow: 0 0 25px 8px rgba(0, 191, 255, 0.363);
     /* Azzurro chiaro e più intenso */
 }
 
-.card:hover .card-img {
+#boxService .card:hover .card-img {
     opacity: 0.2;
     /* Rende l'immagine opaca al passaggio del mouse */
     transition: opacity 0.10s linear;
     /* Transizione per l'opacità dell'immagine */
 }
 
-.card:hover {
+#boxService .card:hover {
     background-color: rgba(15, 117, 250, 0.747);
     /* Sfondo blu opaco al passaggio del mouse */
 }
 
-.card-img-overlay {
+#boxService .card-img-overlay {
     transition: color 0.2s ease-in-out;
 }
 
-.card:hover .card-img-overlay {
+#boxService .card:hover .card-img-overlay {
     color: white;
 }
 
-.card:hover svg {
+#boxService .card:hover svg {
     fill: white;
     transition: fill 0.2s ease-in-out;
 }
@@ -229,4 +229,33 @@ swiper-slide img {
     will-change: width, height, transform, border;
     z-index: 99999;
     pointer-events: none;
+}
+
+/* ---- section testimonial ---- */
+#boxTestimonial swiper-container {
+    margin: 100px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+}
+
+#boxTestimonial swiper-slide {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: black
+}
+
+#boxTestimonial .stars {
+    position: relative;
+    white-space: nowrap;
+}
+
+#boxTestimonial svg {
+    width: 20px;
+    fill: gold;
 }
