@@ -259,3 +259,16 @@ mark {
     width: 20px;
     fill: gold;
 }
+
+/* ---- section contact ---- */
+.form-control-new {
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 0;
+    background-color: #2acdf236;
+}
+
+.button-submit {
+    background-color: #2acff2;
+    color: white;
+}
