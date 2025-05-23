@@ -342,3 +342,13 @@ section .container {
     background-color: rgb(134, 255, 65);
     color: white;
 }
+
+/* ---- section faq ---- */
+.accordion-button-custom {
+    --bs-accordion-active-bg: rgba(135, 255, 65, 0.733);
+}
+
+.accordion-new {
+    --bs-accordion-border-width: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
