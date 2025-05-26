@@ -394,7 +394,7 @@
         </section>
 
         <!-- section chi siamo-->
-        <section class="my-5">
+        <section class="mb-5 mt-lg-5">
             <!-- container chi siamo -->
             <div class="container">
                 <div class="row gap-4">
@@ -446,7 +446,7 @@
         </section>
 
         <!-- section name -->
-        <section class="my-5">
+        <section class="my-5 py-5">
             <div class="container-fluid">
                 <div class="row" id="boxElementName">
                     <div class="col-12" id="boxElementName">
@@ -473,7 +473,7 @@
         </section>
 
         <!-- section missione -->
-        <section class="my-5">
+        <section class="my-5 py-5">
             <!-- container missione -->
             <div class="container">
                 <div class="row gap-4">
@@ -525,10 +525,21 @@
         </section>
 
         <!-- section numbers -->
-        <section class="my-5">
-            <!-- container dove siamo -->
+        <section class="my-5 py-5" id="sectionNumbers">
+            <!-- container numbers -->
             <div class="container">
-                <div class="row gap-4" id="boxElement">
+
+                <!-- box background-img -->
+                <div class="background-image">
+                    <img src="img/icon/icon-logistic-png" alt="Paesaggio montano">
+                </div>
+
+                <!-- box overlay -->
+                <div class="overlay">
+                </div>
+
+
+                <div class="row gap-4 text-content" id="boxElement">
                     <!-- col title -->
                     <div class="col-12 text-center">
                         <!-- title -->
@@ -543,14 +554,14 @@
                             <span id="counterDaily">0</span>+
                         </h2>
                         <!-- title -->
-                        <h6 class="text-secondary">Spedizioni Giornaliere</h6>
+                        <h6>Spedizioni Giornaliere</h6>
                     </div>
                     <!-- col counter shipping -->
                     <div class="col-12 text-center" id="boxCounterShipping">
                         <!-- title -->
                         <h2 class="fw-bold"> + <span id="counterShipping">0</span>% </h2>
                         <!-- title -->
-                        <h6 class="text-secondary">Tasso Di Consegna</h6>
+                        <h6>Tasso Di Consegna</h6>
                     </div>
                     <!-- col counter warehouse -->
                     <div class="col-12 text-center" id="boxCounterWarehouse">
@@ -559,14 +570,15 @@
                             <span id="counterWarehouse">0</span>
                         </h2>
                         <!-- title -->
-                        <h6 class="text-secondary">mq Magazzino</h6>
+                        <h6>mq Magazzino</h6>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- section service -->
-        <section class="my-5">
+        <section class="my-5 py-5">
             <!-- container service information -->
             <div class="container">
                 <div class="row gap-4">
@@ -589,10 +601,12 @@
                     </div>
                 </div>
             </div>
+
             <!-- container service swiper -->
             <div class="container-fluid">
                 <div class="row gap-4">
                     <div class="col-12 text-center" id="boxService">
+
                         <!-- Slider main container -->
                         <swiper-container class="mySwiper" id="swiperProject">
                             <!-- slide stoccaggio merce -->
@@ -901,14 +915,17 @@
                                 </div>
                             </swiper-slide>
                         </swiper-container>
+
+                        <!-- cursone -->
                         <div id="cursor-custom"></div>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- section testimonial -->
-        <section class="my-5">
+        <section class="my-5 py-5">
             <!-- container testimonial -->
             <div class="container-fluid">
                 <div class="row">
@@ -920,16 +937,17 @@
                         </svg>
                     </div>
                     <!-- col title -->
-                    <div class="col-12 p-0 text-center" style="background-color: rgb(134, 255, 65)">
+                    <div class="col-12 p-0 pt-3 pt-lg-0 text-center d-flex flex-column gap-3"
+                        style="background-color: rgb(134, 255, 65)">
                         <!-- title -->
                         <h6 class="fw-bold">TESTIMONIANZE</h6>
                         <!-- title -->
-                        <h1 class="fw-bold">La Fiducia dei Nostri Clienti, il Nostro Successo.</h1>
+                        <h1 class="fw-bold px-3">La Fiducia dei Nostri Clienti, il Nostro Successo.</h1>
                         <!-- paragraph -->
-                        <p> Ecco solo alcuni dei nostri clienti cosa dicono di noi: </p>
+                        <p class="px-3"> Ecco solo alcuni dei nostri clienti cosa dicono di noi: </p>
                     </div>
                     <!-- col swiper testimonial -->
-                    <div class="col-12 text-center d-flex justify-content-center"
+                    <div class="col-12 text-center d-flex justify-content-center pb-5"
                         style="background-color: rgb(134, 255, 65)" id="boxTestimonial">
                         <!-- Slider main container -->
                         <swiper-container init="false" class="mySwiper mySwiper4 m-0" id="swiperTestimonial">
@@ -963,7 +981,8 @@
                                         <!-- title -->
                                         <h2 class="fw-bold my-2">"Tasso di giacenza inferiore al 7%"</h2>
                                         <!-- paragraph -->
-                                        <p class="fst-italic mt-4"> "Da quando mi sono affidato alla BV ho un tasso di
+                                        <p class="fst-italic mt-4"> "Da quando mi sono affidato alla BV ho un
+                                            tasso di
                                             giacenze inferiore al 7%, mercato italiano con contrassegno. I clienti mi
                                             lasciano recensioni a 5 stelle anche per l'esperienza di spedizione e
                                             impacchettamento. Grandi raga!!" </p>
@@ -1117,7 +1136,7 @@
         </section>
 
         <!-- section contact -->
-        <section class="class=" my-5"" id="sectionContact">
+        <section class="my-5 py-5" id="sectionContact">
             <!-- container contact -->
             <div class="container">
                 <div class="row justify-content-center gap-5">
@@ -1184,7 +1203,7 @@
         </section>
 
         <!-- section faq -->
-        <section class="my-5">
+        <section class="my-5 py-5">
 
             <div class="container">
                 <div class="row justify-content-center gap-4">
@@ -1351,8 +1370,6 @@
             </div>
 
         </section>
-
-
     </main>
 </body>
 
