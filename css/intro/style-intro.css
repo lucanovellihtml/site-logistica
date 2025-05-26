@@ -405,3 +405,44 @@ section .container {
     --bs-accordion-border-width: none;
     --bs-accordion-btn-focus-box-shadow: none;
 }
+
+/* ---- section partner ---- */
+#sectionPartner {
+    position: relative;
+    /* Fondamentale: fa da riferimento per gli elementi posizionati assolutamente */
+    display: flex;
+    /* Permette di allineare il contenuto del container al centro */
+    align-items: center;
+    /* Centra verticalmente il contenuto del container */
+    justify-content: center;
+    /* Centra orizzontalmente il contenuto del container */
+    overflow: hidden;
+    /* Nasconde qualsiasi cosa fuoriesca da questa sezione */
+}
+
+#sectionPartner .background-image {
+    position: absolute;
+    /* Si posiziona rispetto alla <section> */
+    width: 100%;
+    height: 100%;
+    /* Nasconde il video che "sfora" */
+    overflow: hidden;
+    /* Il più basso, dietro a tutto */
+    z-index: -2;
+}
+
+#sectionPartner .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantiene proporzioni senza tagliare */
+    object-position: center;
+}
+
+#sectionPartner .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(6, 228, 6, 0.603), rgba(0, 0, 0, 0.9));
+    z-index: -1;
+}
