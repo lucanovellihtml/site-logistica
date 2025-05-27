@@ -1,0 +1,32 @@
+/* ---- footer ---- */
+footer {
+    background-color: black;
+}
+
+footer h6 {
+    color: rgb(134, 255, 65);
+}
+
+footer h5 {
+    transition: color 0.03s linear;
+}
+
+footer h5:hover {
+    color: rgb(134, 255, 65);
+}
+
+#imgRotanteFooter {
+    animation: rotazione 10s linear infinite;
+    max-width: 150px;
+    height: auto;
+}
+
+@keyframes rotazione {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
