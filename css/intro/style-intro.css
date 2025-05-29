@@ -27,7 +27,7 @@ p {
 /* icon nav white */
 .immagine-rotante-intro {
     animation: rotazione 10s linear infinite;
-    max-width: 200px;
+    max-width: 150px;
     height: auto;
 }
 
