@@ -1,5 +1,4 @@
-gsap.registerPlugin(ScrollTrigger)
-
+gsap.registerPlugin(ScrollTrigger);
 /*
     Gestione animazione gsap per il name 
 */
@@ -47,14 +46,14 @@ let timeLineCounter = gsap.timeline({
 
 timeLineCounter.to(counterDaily, {
     innerText: 1934,
-    duration: 2,
+    duration: 1,
     snap: {
         innerText: 1 // Incremental il numero di un intero
     }
 })
     .to(counterShipping, {
         innerText: 97,
-        duration: 2,
+        duration: 1,
         delay: 1,
         snap: {
             innerText: 1
@@ -62,7 +61,7 @@ timeLineCounter.to(counterDaily, {
     })
     .to(counterWarehouse, {
         innerText: 1000,
-        duration: 2,
+        duration: 1,
         delay: 1,
         snap: {
             innerText: 1
@@ -95,7 +94,7 @@ timeLineScale.to(boxCounterDaily, {
         yoyo: true,
         repeat: 1,
         ease: "power1.inOut",
-        delay: 1
+        delay: 0
     })
     .to(boxCounterWarehouse, {
         scale: 1.2,
@@ -103,6 +102,26 @@ timeLineScale.to(boxCounterDaily, {
         yoyo: true,
         repeat: 1,
         ease: "power1.inOut",
-        delay: 1
+        delay: 0
     })
 
+/*
+    Gestione animazione gsap del footer
+*/
+const boxAnimato = document.getElementById("rowPartner");
+const sectionPartner = document.getElementById("sectionPartner");
+
+//gsap.from() significa che l'animazione parte dai valori specificati e va verso i valori CSS attuali dell'elemento.
+gsap.from(boxAnimato, {
+    y: 300,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionPartner,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        markers: true
+    }
+});
