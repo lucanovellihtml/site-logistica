@@ -9,6 +9,10 @@ nav {
     font-family: "Montserrat", sans-serif;
 }
 
+.button-custom-header {
+    background-color: rgb(134, 255, 65);
+}
+
 h4 {
     font-size: 16px;
     font-weight: 500;
@@ -139,5 +143,10 @@ h4 {
 /* svg */
 .svg-size {
     width: 20px;
+    height: auto;
+}
+
+.svg-size-instagram {
+    width: 25px;
     height: auto;
 }
