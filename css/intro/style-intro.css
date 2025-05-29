@@ -24,6 +24,23 @@ p {
     font-size: 1rem;
 }
 
+/* icon nav white */
+.immagine-rotante-intro {
+    animation: rotazione 10s linear infinite;
+    max-width: 200px;
+    height: auto;
+}
+
+@keyframes rotazione {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* ---- section intro ---- */
 #sectionIntro {
     position: relative;
@@ -43,24 +60,6 @@ p {
     /* Centra orizzontalmente il contenuto del container */
     overflow: hidden;
     /* Nasconde qualsiasi cosa fuoriesca da questa sezione */
-}
-
-
-/* icon nav white */
-.immagine-rotante-intro {
-    animation: rotazione 10s linear infinite;
-    max-width: 200px;
-    height: auto;
-}
-
-@keyframes rotazione {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 #titleIntro {
@@ -443,6 +442,6 @@ section .container {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(6, 228, 6, 0.603), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to bottom, rgba(6, 228, 6, 0.459), rgba(0, 0, 0, 0.9));
     z-index: -1;
 }
