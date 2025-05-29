@@ -13,7 +13,7 @@ let tl = gsap.timeline({
         end: "top top",
         scoller: boxElementName,
         scrub: true,
-        markers: true
+        markers: false
 
     }
 });
@@ -46,14 +46,14 @@ let timeLineCounter = gsap.timeline({
 
 timeLineCounter.to(counterDaily, {
     innerText: 1934,
-    duration: 1,
+    duration: 0.5,
     snap: {
         innerText: 1 // Incremental il numero di un intero
     }
 })
     .to(counterShipping, {
         innerText: 97,
-        duration: 1,
+        duration: 0.5,
         delay: 1,
         snap: {
             innerText: 1
@@ -61,7 +61,7 @@ timeLineCounter.to(counterDaily, {
     })
     .to(counterWarehouse, {
         innerText: 1000,
-        duration: 1,
+        duration: 0.5,
         delay: 1,
         snap: {
             innerText: 1
@@ -82,27 +82,27 @@ let timeLineScale = gsap.timeline({
 })
 
 timeLineScale.to(boxCounterDaily, {
-    scale: 1.2, // Ingrandisci il testo del 50%
-    duration: 1, // Durata dell'ingrandimento: 0.5 secondi
+    scale: 1.3, // Ingrandisci il testo del 50%
+    duration: 0.5, // Durata dell'ingrandimento: 0.5 secondi
     yoyo: true, // Fa sì che l'animazione si ripeta all'indietro
     repeat: 1, // Ripeti l'animazione 1 volte (una volta in totale)
     ease: "power1.inOut", // Tipo di easing per un movimento più naturale
 })
     .to(boxCounterShipping, {
-        scale: 1.2,
-        duration: 1,
+        scale: 1.3,
+        duration: 0.5,
         yoyo: true,
         repeat: 1,
         ease: "power1.inOut",
-        delay: 0
+        delay: 0.5
     })
     .to(boxCounterWarehouse, {
-        scale: 1.2,
-        duration: 1,
+        scale: 1.3,
+        duration: 0.5,
         yoyo: true,
         repeat: 1,
         ease: "power1.inOut",
-        delay: 0
+        delay: 0.5
     })
 
 /*
@@ -115,13 +115,151 @@ const sectionPartner = document.getElementById("sectionPartner");
 gsap.from(boxAnimato, {
     y: 300,
     opacity: 0,
-    duration: 1.5,
+    duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionPartner,
         start: "top top",
         end: "center center",
         //scrub: 1,
-        markers: true
+        //markers: false
+    }
+});
+
+/*
+    Gestione animazione gsap della section chi siamo
+*/
+const sectionChiSiamo = document.getElementById("sectionChiSiamo");
+const titleSectionChiSiamo = document.getElementById("titleSectionChiSiamo");
+
+gsap.from(titleSectionChiSiamo, {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionChiSiamo,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
+    }
+});
+
+/*
+    Gestione animazione gsap della section mission
+*/
+const sectionMission = document.getElementById("sectionMission");
+const titleSectionMission = document.getElementById("titleSectionMission");
+
+gsap.from(titleSectionMission, {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionMission,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
+    }
+});
+
+/*
+    Gestione animazione gsap della section mission
+*/
+const sectionService = document.getElementById("sectionService");
+const titleSectionService = document.getElementById("titleSectionService");
+const titleSectionServiceSmall = document.getElementById("titleSectionServiceSmall");
+const paragraphSectionService = document.getElementById("paragraphSectionService");
+
+let timeLineAnimationSectionMission = gsap.timeline({
+
+    scrollTrigger: {
+        trigger: sectionService,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
+    }
+})
+
+timeLineAnimationSectionMission.from(titleSectionService, {
+    y: 50,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out"
+})
+    .from(titleSectionServiceSmall, {
+        y: 50,
+        opacity: 0,
+        duration: 0.1,
+        ease: "power2.out"
+    })
+    .from(paragraphSectionService, {
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out"
+    })
+
+/*
+    Gestione animazione gsap della section testimonial
+*/
+const sectionTestimonial = document.getElementById("sectionTestimonial");
+const titleSectionTestimonial = document.getElementById("titleSectionTestimonial");
+
+gsap.from(titleSectionTestimonial, {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionTestimonial,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
+    }
+});
+
+/*
+    Gestione animazione gsap della section contact
+*/
+const sectionContact = document.getElementById("sectionContact");
+const titleSectionContact = document.getElementById("titleSectionContact");
+
+gsap.from(titleSectionContact, {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionContact,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
+    }
+});
+
+/*
+    Gestione animazione gsap della section contact
+*/
+const sectionFaq = document.getElementById("sectionFaq");
+const titleSectionFaq = document.getElementById("titleSectionFaq");
+
+gsap.from(titleSectionFaq, {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: sectionFaq,
+        start: "top top",
+        end: "center center",
+        //scrub: 1,
+        //markers: false
     }
 });
