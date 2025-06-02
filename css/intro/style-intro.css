@@ -227,49 +227,6 @@ section .container {
     color: white;
 }
 
-/* ---- section numbers ---- */
-#sectionNumbers .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#sectionNumbers .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-#sectionNumbers .background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Mantiene proporzioni senza tagliare */
-    object-position: center;
-}
-
-#sectionNumbers .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.815);
-    z-index: 2;
-}
-
-#sectionNumbers .text-content {
-    position: relative;
-    z-index: 3;
-    color: black;
-    text-align: center;
-}
-
 /* ---- section service ---- */
 #boxService swiper-container {
     width: 100%;
