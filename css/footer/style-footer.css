@@ -7,6 +7,10 @@ footer h6 {
     color: rgb(134, 255, 65);
 }
 
+.border-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 footer h5 {
     transition: color 0.03s linear;
 }
