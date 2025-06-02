@@ -358,7 +358,8 @@ section .container {
 
 /* ---- section faq ---- */
 .accordion-button-custom {
-    --bs-accordion-active-bg: rgba(135, 255, 65, 0.733);
+    --bs-accordion-active-bg: rgb(68 186 0);
+    --bs-accordion-active-color: black;
 }
 
 .accordion-new {
