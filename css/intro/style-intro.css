@@ -281,7 +281,8 @@ section .container {
 }
 
 #boxService .card:hover {
-    background-color: rgba(135, 255, 65, 0.733);
+    /*background-color: rgba(135, 255, 65, 0.733);*/
+    background-color: rgb(68 186 0);
     /* Sfondo verde opaco al passaggio del mouse */
 }
 
