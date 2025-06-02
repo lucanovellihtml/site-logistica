@@ -7,13 +7,13 @@
 }
 
 .button-active {
-    --bs-btn-hover-bg: rgb(134, 255, 65);
+    --bs-btn-hover-bg: rgb(68 186 0);
     --bs-btn-hover-color: black;
     --bs-btn-active-color: black;
-    --bs-btn-active-bg: rgb(134, 255, 65);
-    --bs-btn-active-border-color: rgb(134, 255, 65);
-    --bs-btn-disabled-border-color: rgb(134, 255, 65);
-    --bs-btn-hover-border-color: rgb(134, 255, 65);
+    --bs-btn-active-bg: rgb(68 186 0);
+    --bs-btn-active-border-color: rgb(68 186 0);
+    --bs-btn-disabled-border-color: rgb(68 186 0);
+    --bs-btn-hover-border-color: rgb(68 186 0);
 }
 
 .button-active:hover svg {
