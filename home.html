@@ -117,13 +117,13 @@
                     <button
                         class="button-custom-header navbar-toggler rounded-4 d-flex gap-2 align-items-center justify-content-between"
                         type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation"
                         id="openMenuBtn">
                         <!-- span -->
                         <span class="text-white fw-bold">MENU</span>
                         <!-- icon button -->
-                        <label for="check">
-                            <input type="checkbox" id="check" />
+                        <label for="check" id="labelCheck">
+                            <input type="checkbox" id="inputCheck" />
                             <span></span>
                             <span></span>
                             <span></span>
@@ -135,15 +135,15 @@
                     <div class="position-absolute text-center top-50 start-50 translate-middle w-100"
                         style="max-width: 2000px;">
                         <!-- list page -->
-                        <ul class="menu-items d-lg-flex gap-3 mt-5 justify-content-center">
+                        <ul class="menu-items d-lg-flex gap-3 mt-5 justify-content-center" id="listMenuItems">
                             <li>
                                 <a href="#sectionChiSiamo">Chi siamo</a>
                             </li>
                             <li>
-                                <a href="#sectionComeLavoriamo">Come lavoriamo</a>
+                                <a href="#sectionMission">Come lavoriamo</a>
                             </li>
                             <li>
-                                <a href="#sectionCosaFacciamo">Cosa facciamo</a>
+                                <a href="#sectionService">Cosa facciamo</a>
                             </li>
                             <li>
                                 <a href="#sectionContact">Contatti</a>
@@ -1515,7 +1515,7 @@
                     </ul>
                 </div>
 
-                <!-- col info pt.iva-->
+                <!-- col info -->
                 <div class="col-12 col-sm-6 mt-sm-2 mt-4 text-white text-center">
                     <p class="m-0">
                         © 2025 BV Express Logistics
