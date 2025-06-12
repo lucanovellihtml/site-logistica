@@ -41,6 +41,25 @@ p {
     }
 }
 
+/* Applica questi stili solo quando il dispositivo ha un puntatore fine (come un mouse) e non è un touchscreen */
+@media (hover:hover) and (pointer:fine) {
+    #cursor-custom {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(63, 216, 2);
+        border-radius: 50%;
+        transform-origin: 50% 50%;
+        transform: translate(-50%, -50%);
+        will-change: width, height, transform, border;
+        z-index: 99999;
+        pointer-events: none;
+    }
+}
+
+
 /* ---- section intro ---- */
 #sectionIntro {
     position: relative;
@@ -297,21 +316,6 @@ section .container {
 #boxService .card:hover svg {
     fill: white;
     transition: fill 0.2s ease-in-out;
-}
-
-#cursor-custom {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(43, 117, 0);
-    border-radius: 50%;
-    transform-origin: 50% 50%;
-    transform: translate(-50%, -50%);
-    will-change: width, height, transform, border;
-    z-index: 99999;
-    pointer-events: none;
 }
 
 /* ---- section testimonial ---- */
