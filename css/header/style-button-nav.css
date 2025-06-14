@@ -15,19 +15,18 @@ label span {
 
 }
 
-
 span:nth-of-type(1) {
     width: 50%;
 
 }
 
 span:nth-of-type(2) {
-    width: 92%;
+    width: 90%;
 }
 
 
 span:nth-of-type(3) {
-    width: 75%;
+    width: 54%;
 
 }
 
@@ -37,23 +36,19 @@ input[type="checkbox"] {
 }
 
 
-input[type="checkbox"]:checked~span:nth-of-type(1) {
+.span-checked-style-one {
     transform-origin: bottom;
     transform: rotatez(45deg) translate(4px, 0px)
 }
 
 
-input[type="checkbox"]:checked~span:nth-of-type(2) {
-
+.span-checked-style-two {
     transform-origin: top;
     transform: rotatez(-45deg)
 }
 
 
-input[type="checkbox"]:checked~span:nth-of-type(3) {
-
+.span-checked-style-three {
     transform-origin: bottom;
-    width: 50%;
     transform: translate(11px, -5px) rotatez(45deg);
-
 }
