@@ -34,3 +34,30 @@ footer h5:hover {
         transform: rotate(360deg);
     }
 }
+
+/* svg */
+footer .svg-size {
+    width: 20px;
+    height: auto;
+}
+
+footer .svg-size-instagram {
+    width: 25px;
+    height: auto;
+}
+
+footer svg {
+    transition: fill 0.03s linear;
+}
+
+footer svg:hover {
+    fill: rgb(134, 255, 65);
+}
+
+#Dribbble-Light-Preview {
+    transition: fill 0.03s linear;
+}
+
+#Dribbble-Light-Preview:hover {
+    fill: rgb(134, 255, 65);
+}
