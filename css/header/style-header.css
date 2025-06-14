@@ -30,6 +30,19 @@ h4 {
     /* Assicura che sia sopra ad altri elementi */
 }
 
+.menu-open-body {
+    /* Impedisce lo scorrimento della pagina */
+    overflow: hidden;
+    /* Fa in modo che il body mantenga la sua posizione, prevenendo saltellamenti */
+    position: fixed;
+    /* Assicura che il body occupi l'intera larghezza */
+    width: 100%;
+    /* Assicura che il body occupi l'intera altezza */
+    height: 100%;
+    /* Inizia dalla parte superiore della finestra */
+    top: 0;
+}
+
 .fullscreen-menu {
     display: none;
     position: fixed;
@@ -100,9 +113,15 @@ h4 {
     transition-delay: 0.4s;
 }
 
+/* aggiunto colorazione hover ai link anchor */
 .menu-items li a {
     color: white;
     text-decoration: none;
+    transition: color 0.03s linear;
+}
+
+.menu-items li a:hover {
+    color: rgb(134, 255, 65);
 }
 
 /* animazione dell'icon nav, list address e list social del full screen */
@@ -143,12 +162,28 @@ h4 {
 }
 
 /* svg */
-.svg-size {
+header .svg-size {
     width: 20px;
     height: auto;
 }
 
-.svg-size-instagram {
+header .svg-size-instagram {
     width: 25px;
     height: auto;
+}
+
+header svg {
+    transition: fill 0.03s linear;
+}
+
+header svg:hover {
+    fill: rgb(134, 255, 65);
+}
+
+#Dribbble-Light-Preview {
+    transition: fill 0.03s linear;
+}
+
+#Dribbble-Light-Preview:hover {
+    fill: rgb(134, 255, 65);
 }
