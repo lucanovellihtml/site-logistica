@@ -1,0 +1,24 @@
+/* ---- body ---- */
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    /* Il main si espande per occupare tutto lo spazio disponibile */
+    flex-grow: 1;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ---- footer ---- */
+
+.class-icon-nav {
+    max-width: 100px;
+    height: auto;
+}
