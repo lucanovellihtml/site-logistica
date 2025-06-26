@@ -1067,14 +1067,14 @@
                     <!-- col forum -->
                     <div class="col-12 col-lg-8 mt-3">
                         <!-- form -->
-                        <form class="row g-3" action="https://formspree.io/f/xqaqopnv" method="POST"
+                        <form id="contactForm" class="row g-3" action="https://formspree.io/f/xqaqopnv" method="POST"
                             enctype="multipart/form-data">
                             <input type="hidden" name="_subject"
                                 value="Richiesta form dal sito www.bvexpresslogisticts.it">
-                            <!-- <input type="hidden" name="_next" value="https://tuodominio.it/grazie.html"> -->
                             <!-- ragione sociale -->
                             <div class="col-12">
-                                <label for="ragioneSociale" class="form-label fw-bold w-100">Ragione Sociale*</label>
+                                <label for="ragioneSociale" class="form-label fw-bold w-100">Ragione
+                                    Sociale*</label>
                                 <input type="text" class="form-control form-control-new" id="ragioneSociale"
                                     name="ragioneSociale" required>
                                 <div class="invalid-feedback"> Per favore, inserisci la ragione sociale. </div>
@@ -1084,14 +1084,16 @@
                                 <label for="email" class="form-label fw-bold w-100">E-mail*</label>
                                 <input type="email" class="form-control form-control-new" id="email" name="email"
                                     required>
-                                <div class="invalid-feedback"> Per favore, inserisci un indirizzo email valido. </div>
+                                <div class="invalid-feedback"> Per favore, inserisci un indirizzo email valido.
+                                </div>
                             </div>
                             <!-- recapito telefonico -->
                             <div class="col-12">
                                 <label for="telefono" class="form-label fw-bold w-100">Numero di Tel.*</label>
                                 <input type="tel" class="form-control form-control-new" id="telefono" name="telefono"
                                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Formato: 1234567890" required>
-                                <div class="invalid-feedback"> Per favore, inserisci un numero di telefono valido (es.
+                                <div class="invalid-feedback"> Per favore, inserisci un numero di telefono valido
+                                    (es.
                                     1234567890). </div>
                             </div>
                             <!-- partita iva -->
@@ -1110,9 +1112,9 @@
                             <div class="col-12">
                                 <button type="submit"
                                     class="btn fw-bold button-submit rounded-5 px-3 py-2">INVIA</button>
-                            </div>
                         </form>
                     </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -1572,6 +1574,9 @@
 
 <!-- script gsap section service cursor -->
 <script src="js/intro/script-cursor-gsap.js"></script>
+
+<!-- script section contact gestione form submit -->
+<script src="js/intro/script-check-form.js"></script>
 
 <!-- script swiper section service -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
