@@ -1,4 +1,28 @@
 gsap.registerPlugin(ScrollTrigger);
+
+/*
+    Funzione per determinare il valore di 'start' in base alla larghezza del display
+*/
+function getResponsiveStart() {
+    // Ottiene la larghezza della finestra in pixel
+    const windowWidth = window.innerWidth;
+
+    // Definisci i tuoi breakpoint e i corrispondenti valori di 'start'
+    if (windowWidth < 768) {
+        // Per schermi piccoli (es. mobili): l'animazione inizia quando la parte superiore della box
+        // è al 70% della viewport (più in alto)
+        return "top 70%";
+    } else if (windowWidth >= 768 && windowWidth < 1200) {
+        // Per schermi medi (es. tablet): l'animazione inizia quando la parte superiore della box
+        // è al 80% della viewport
+        return "top 80%";
+    } else {
+        // Per schermi grandi (es. desktop): l'animazione inizia quando la parte superiore della box
+        // è al 70% della viewport (più in basso)
+        return "top 70%";
+    }
+}
+
 /*
     Gestione animazione gsap per il name 
 */
@@ -38,7 +62,8 @@ let timeLineCounter = gsap.timeline({
 
     scrollTrigger: {
         trigger: boxElement,
-        start: "top bottom",
+        //start: "top top",
+        start: getResponsiveStart(),
         markers: false
     }
 
@@ -76,7 +101,8 @@ let timeLineScale = gsap.timeline({
 
     scrollTrigger: {
         trigger: boxElement,
-        start: "top bottom",
+        //start: "top top",
+        start: getResponsiveStart(),
         markers: false
     }
 })
@@ -120,9 +146,9 @@ gsap.from(boxAnimato, {
     scrollTrigger: {
         trigger: sectionPartner,
         start: "top top",
-        end: "center center",
+        end: "top top",
         //scrub: 1,
-        //markers: false
+        markers: false
     }
 });
 
@@ -142,7 +168,7 @@ gsap.from(titleSectionChiSiamo, {
         start: "top top",
         end: "center center",
         //scrub: 1,
-        //markers: false
+        markers: false
     }
 });
 
@@ -159,33 +185,33 @@ gsap.from(titleSectionMission, {
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionMission,
-        start: "top top",
+        start: "top center",
         end: "center center",
         //scrub: 1,
-        //markers: false
+        markers: false
     }
 });
 
 /*
-    Gestione animazione gsap della section mission
+    Gestione animazione gsap della section service
 */
 const sectionService = document.getElementById("sectionService");
 const titleSectionService = document.getElementById("titleSectionService");
 const titleSectionServiceSmall = document.getElementById("titleSectionServiceSmall");
 const paragraphSectionService = document.getElementById("paragraphSectionService");
 
-let timeLineAnimationSectionMission = gsap.timeline({
+let timeLineAnimationSectionService = gsap.timeline({
 
     scrollTrigger: {
         trigger: sectionService,
-        start: "top top",
+        start: "top center",
         end: "center center",
         //scrub: 1,
-        //markers: false
+        markers: false
     }
 })
 
-timeLineAnimationSectionMission.from(titleSectionService, {
+timeLineAnimationSectionService.from(titleSectionService, {
     y: 50,
     opacity: 0,
     duration: 0.5,
@@ -217,7 +243,7 @@ gsap.from(titleSectionTestimonial, {
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionTestimonial,
-        start: "top top",
+        start: "top center",
         end: "center center",
         //scrub: 1,
         //markers: false
@@ -237,7 +263,7 @@ gsap.from(titleSectionContact, {
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionContact,
-        start: "top top",
+        start: "top center",
         end: "center center",
         //scrub: 1,
         //markers: false
@@ -245,7 +271,7 @@ gsap.from(titleSectionContact, {
 });
 
 /*
-    Gestione animazione gsap della section contact
+    Gestione animazione gsap della section faq
 */
 const sectionFaq = document.getElementById("sectionFaq");
 const titleSectionFaq = document.getElementById("titleSectionFaq");
@@ -257,7 +283,7 @@ gsap.from(titleSectionFaq, {
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionFaq,
-        start: "top top",
+        start: "top center",
         end: "center center",
         //scrub: 1,
         //markers: false
