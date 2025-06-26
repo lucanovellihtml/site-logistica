@@ -145,7 +145,7 @@ gsap.from(boxAnimato, {
     ease: "power2.out",
     scrollTrigger: {
         trigger: sectionPartner,
-        start: "top top",
+        start: getResponsiveStart(),
         end: "top top",
         //scrub: 1,
         markers: false
@@ -164,9 +164,8 @@ gsap.from(titleSectionChiSiamo, {
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-        trigger: sectionChiSiamo,
-        start: "top top",
-        end: "center center",
+        trigger: titleSectionChiSiamo,
+        start: getResponsiveStart(),
         //scrub: 1,
         markers: false
     }
