@@ -53,7 +53,7 @@ h4 {
     height: 100%;
     z-index: 999;
     /* Transizione solo per la proprietà 'top' */
-    background-image: url('/img/background/img-background-menu-1.jpg');
+    background-image: url('/img/background/img-background-menu.webp');
     background-size: cover;
     /* Scala l'immagine per coprire l'intero contenitore */
     background-position: center;
@@ -62,6 +62,7 @@ h4 {
     /* Animazione menu a tendina */
     transition: top 0.3s ease-in-out;
 }
+
 
 .fullscreen-menu.open {
     /* Scorre in posizione */
