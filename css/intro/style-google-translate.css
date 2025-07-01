@@ -1,0 +1,43 @@
+/* Pulsante custom */
+.custom-lang-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.lang-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* Pulstante google */
+.goog-te-gadget-simple {
+    background-color: #007bff !important;
+    border: none !important;
+}
+
+.VIpgJd-ZVi9od-xl07Ob-lTBxed {
+    color: white !important;
+}
+
+.VIpgJd-ZVi9od-xl07Ob-lTBxed>span:nth-of-type(2) {
+    display: none;
+}
+
+.VIpgJd-ZVi9od-xl07Ob-lTBxed>span:nth-of-type(3) {
+    color: white !important;
+}
+
+/* Immagine di google nel bottone */
+.goog-te-gadget>.goog-te-gadget-simple>img {
+    display: none;
+}
