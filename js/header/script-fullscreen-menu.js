@@ -25,7 +25,7 @@ var flagOpenMenu;
   Questo evento si attiva *prima* che il menu diventi visibile.
 */
 fullscreenMenu.addEventListener('show.bs.collapse', () => {
-    console.log("Evento Bootstrap: show.bs.collapse - Il menu sta per aprirsi");
+    //console.log("Evento Bootstrap: show.bs.collapse - Il menu sta per aprirsi");
     // bootstrap gestisce aria-expanded e collapsed, noi ci occupiamo dell'animazione
     // activeMenu() gestirà anche l'aggiornamento della checkbox e degli span
     activeMenu();
@@ -36,7 +36,7 @@ fullscreenMenu.addEventListener('show.bs.collapse', () => {
   Questo evento si attiva *prima* che il menu diventi nascosto.
 */
 fullscreenMenu.addEventListener('hide.bs.collapse', () => {
-    console.log("Evento Bootstrap: hide.bs.collapse - Il menu sta per chiudersi");
+    //console.log("Evento Bootstrap: hide.bs.collapse - Il menu sta per chiudersi");
     // bootstrap gestisce aria-expanded e collapsed, noi ci occupiamo dell'animazione
     // notActiveMenu() gestirà anche l'aggiornamento della checkbox e degli span
     notActiveMenu();
