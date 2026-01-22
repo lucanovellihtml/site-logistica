@@ -70,7 +70,7 @@ let timeLineCounter = gsap.timeline({
 });
 
 timeLineCounter.to(counterDaily, {
-    innerText: 1934,
+    innerText: 500,
     duration: 0.5,
     snap: {
         innerText: 1 // Incremental il numero di un intero
