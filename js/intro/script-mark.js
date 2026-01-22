@@ -9,7 +9,7 @@ const title = document.getElementById("titleIntro")
 const markInstance = new Mark(title);
 
 // Titolo da sottolineare
-const titleMarked = "Benvenuto in BV Express Logistic";
+const titleMarked = "Benvenuto in BV Express Logistics";
 
 // Titolo da sottolineare in inglese
 const titleMarkedEn = "Welcome to BV Express Logistics";
