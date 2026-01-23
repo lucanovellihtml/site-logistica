@@ -5,11 +5,12 @@ Object.assign(swiperEl, {
     slidesPerView: "auto",
     spaceBetween: 30,
     speed: 8000,
+    allowTouchMove: false,
     autoplay: {
         delay: 0,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
-    }
+    },
 });
 
 swiperEl.initialize();
