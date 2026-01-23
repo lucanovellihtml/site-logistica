@@ -9,11 +9,7 @@ Object.assign(swiperEl, {
         delay: 0,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
-    },
-    freeMode: {
-        enabled: true,
-        momentum: false,
-    },
+    }
 });
 
 swiperEl.initialize();
