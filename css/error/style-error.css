@@ -1,0 +1,69 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.error-container {
+    padding: 2rem;
+    z-index: 2;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 900;
+    color: #99FF33;
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(153, 255, 51, 0.4);
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.btn-home {
+    background-color: #99FF33;
+    color: #000;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid #99FF33;
+}
+
+.btn-home:hover {
+    background-color: transparent;
+    color: #99FF33;
+    box-shadow: 0 0 15px rgba(153, 255, 51, 0.5);
+}
+
+.bg-logo {
+    position: absolute;
+    opacity: 0.05;
+    width: 60%;
+    z-index: 1;
+    pointer-events: none;
+    animation: rotazione 20s linear infinite;
+}
+
+@keyframes rotazione {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
