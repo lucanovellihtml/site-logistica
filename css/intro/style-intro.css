@@ -7,13 +7,13 @@
 }
 
 .button-active {
-    --bs-btn-hover-bg: rgb(68 186 0);
+    --bs-btn-hover-bg: #99FF33;
     --bs-btn-hover-color: black;
     --bs-btn-active-color: black;
-    --bs-btn-active-bg: rgb(68 186 0);
-    --bs-btn-active-border-color: rgb(68 186 0);
-    --bs-btn-disabled-border-color: rgb(68 186 0);
-    --bs-btn-hover-border-color: rgb(68 186 0);
+    --bs-btn-active-bg: #99FF33;
+    --bs-btn-active-border-color: #99FF33;
+    --bs-btn-disabled-border-color: #99FF33;
+    --bs-btn-hover-border-color: #99FF33;
 }
 
 .button-active:hover svg {
@@ -233,7 +233,7 @@ section .container {
     height: auto;
     max-height: 500px;
     min-height: 100px;
-    background-color: rgb(68 186 0);
+    background-color: #99FF33;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -362,17 +362,17 @@ section .container {
     border: none;
     border-bottom: 2px solid #e0e0e0;
     border-radius: 0;
-    background-color: rgba(135, 255, 65, 0.349);
+    background-color: rgba(202, 202, 202, 0.349);
 }
 
 .button-submit {
-    background-color: rgb(68 186 0);
+    background-color: #99FF33;
     color: black;
 }
 
 /* ---- section faq ---- */
 .accordion-button-custom {
-    --bs-accordion-active-bg: rgb(68 186 0);
+    --bs-accordion-active-bg: #99FF33;
     --bs-accordion-active-color: black;
 }
 
