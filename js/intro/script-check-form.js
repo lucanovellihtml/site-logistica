@@ -1,95 +1,77 @@
-// Form italiano
-const form = document.getElementById("contactForm");
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
 
-if (form != null) {
-    form.addEventListener("submit", async function (event) {
+    if (contactForm) {
+        contactForm.addEventListener("submit", async function (event) {
 
-        // Blocco l'invio predefinito del form
-        event.preventDefault()
-
-        // Raccolgo tutti i dati del form
-        const formData = new FormData(form);
-
-        try {
-            //Invia i dati a Formspree usando la fetch
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
-                }
-            });
-
-            if (response.ok) {
-                form.reset(); // Resetta il form
-
-                // REINDIRIZZA ALLA TUA PAGINA CUSTOM DOPO UN BREVE RITARDO
-                setTimeout(() => {
-                    window.location.href = 'https://www.lucanovelliws.it/post-form.html'; // SOSTITUISCI CON L'URL DELLA TUA PAGINA
-                }, 1500); // Reindirizza dopo 1.5 secondi
-            } else { // Se c'è stato un errore nell'invio
-                // Tenta di leggere il messaggio di errore
-                const data = await response.json();
-                if (data && data.errors) {
-                    formStatus.textContent = 'Errore: ' + data.errors.map(err => err.message).join(', ');
-                } else {
-                    formStatus.textContent = 'Errore durante l\'invio del messaggio. Riprova.';
-                }
-                formStatus.className = 'error';
+            // 1. Validazione Bootstrap
+            if (!contactForm.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                contactForm.classList.add('was-validated');
+                return;
             }
-        } catch (error) { // Se c'è un errore di rete o altro
-            formStatus.textContent = 'Si è verificato un problema di connessione.';
-            formStatus.className = 'error';
-            console.error('Errore di rete:', error);
-        }
 
-    });
-}
+            // 2. Secondo Controllo (JS Custom) - Previene bypass "Ispeziona Elemento"
+            const formData = new FormData(contactForm);
+            const ragioneSociale = formData.get("ragioneSociale");
+            const email = formData.get("email");
+            const telefono = formData.get("telefono");
 
-// Form inglese
-const formEn = document.getElementById("contactFormEn");
+            // Esempio di validazione Regex per email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            // Esempio di validazione per telefono (almeno 6 cifre)
+            const telRegex = /^[0-9\s\+\-\(\)]{6,}$/;
 
-if (formEn) {
-    formEn.addEventListener("submit", async function (event) {
+            let isValid = true;
 
-        // Blocco l'invio predefinito del form
-        event.preventDefault()
-
-        // Raccolgo tutti i dati del form
-        const formData = new FormData(formEn);
-
-        try {
-            //Invia i dati a Formspree usando la fetch
-            const response = await fetch(formEn.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "Accept": "application/json"
-                }
-            });
-
-            if (response.ok) {
-                formEn.reset(); // Resetta il form
-
-                // REINDIRIZZA ALLA TUA PAGINA CUSTOM DOPO UN BREVE RITARDO
-                setTimeout(() => {
-                    window.location.href = 'https://www.lucanovelliws.it/post-form-en.html'; // SOSTITUISCI CON L'URL DELLA TUA PAGINA
-                }, 1500); // Reindirizza dopo 1.5 secondi
-            } else { // Se c'è stato un errore nell'invio
-                // Tenta di leggere il messaggio di errore
-                const data = await response.json();
-                if (data && data.errors) {
-                    formStatus.textContent = 'Errore: ' + data.errors.map(err => err.message).join(', ');
-                } else {
-                    formStatus.textContent = 'Errore durante l\'invio del messaggio. Riprova.';
-                }
-                formStatus.className = 'error';
+            if (!ragioneSociale || ragioneSociale.trim().length === 0) {
+                isValid = false;
             }
-        } catch (error) { // Se c'è un errore di rete o altro
-            formStatus.textContent = 'Si è verificato un problema di connessione.';
-            formStatus.className = 'error';
-            console.error('Errore di rete:', error);
-        }
+            if (!email || !emailRegex.test(email)) {
+                isValid = false;
+            }
+            if (!telefono || !telRegex.test(telefono)) {
+                isValid = false;
+            }
 
-    });
-}
+            if (!isValid) {
+                event.preventDefault();
+                event.stopPropagation();
+                alert("Errore nella validazione dei dati. Per favore controlla i campi inseriti.");
+                return;
+            }
+
+            // Se arriviamo qui, il form è valido. Procediamo con l'invio asincrono.
+            event.preventDefault();
+            contactForm.classList.add('was-validated');
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+
+                    // Mostra il popup (modal Bootstrap) al posto del redirect
+                    const successModalElement = document.getElementById('successModal');
+                    if (successModalElement) {
+                        const successModal = new bootstrap.Modal(successModalElement);
+                        successModal.show();
+                    }
+                } else {
+                    alert("Si è verificato un errore durante l'invio. Riprova più tardi.");
+                }
+            } catch (error) {
+                console.error("Errore di rete:", error);
+                alert("Problema di connessione. Verifica la tua linea e riprova.");
+            }
+        });
+    }
+});
