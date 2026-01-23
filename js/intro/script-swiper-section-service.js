@@ -5,18 +5,18 @@ const slider = new KeenSlider("#keen-slider-project", {
     renderMode: "performance",
     drag: true,
     slides: {
-        perView: 1,
+        perView: "auto",
         spacing: 20,
     },
     breakpoints: {
         "(min-width: 768px)": {
-            slides: { perView: 2, spacing: 30 },
+            slides: { perView: "auto", spacing: 30 },
         },
         "(min-width: 1200px)": {
-            slides: { perView: 3, spacing: 40 },
+            slides: { perView: "auto", spacing: 40 },
         },
         "(min-width: 1600px)": {
-            slides: { perView: 4, spacing: 50 },
+            slides: { perView: "auto", spacing: 50 },
         },
     },
     created(s) {
