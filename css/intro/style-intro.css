@@ -261,10 +261,11 @@ section .container {
     font-size: 18px;
     color: black;
     background: #fff;
-    width: 100%;
-    min-width: 450px;
+    width: 450px !important;
+    /* Force fixed width */
+    flex-shrink: 0 !important;
+    /* Prevent shrinking */
     height: 100%;
-    max-width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
