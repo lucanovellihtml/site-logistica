@@ -262,6 +262,7 @@ section .container {
     color: black;
     background: #fff;
     width: 100%;
+    min-width: 450px;
     height: 100%;
     max-width: 450px;
     display: flex;
@@ -269,7 +270,7 @@ section .container {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-
+    box-sizing: border-box;
 }
 
 #boxService swiper-slide img {
