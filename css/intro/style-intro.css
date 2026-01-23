@@ -252,6 +252,10 @@ section .container {
     height: 100%;
 }
 
+#swiperProject::part(wrapper) {
+    transition-timing-function: linear !important;
+}
+
 #boxService swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -300,9 +304,8 @@ section .container {
 }
 
 #boxService .card:hover {
-    /*background-color: rgba(135, 255, 65, 0.733);*/
-    background-color: rgb(68 186 0);
-    /* Sfondo verde opaco al passaggio del mouse */
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Sfondo nero opaco al passaggio del mouse */
 }
 
 #boxService .card-img-overlay {
@@ -311,6 +314,13 @@ section .container {
 
 #boxService .card:hover .card-img-overlay {
     color: white;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Migliora la leggibilità su sfondi scuri */
+}
+
+#boxService .card:hover .card-title {
+    font-weight: 700;
 }
 
 #boxService .card:hover svg {
