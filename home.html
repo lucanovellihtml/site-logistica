@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -1081,20 +1081,26 @@
                     <!-- col forum -->
                     <div class="col-12 col-lg-8 mt-3">
                         <!-- form -->
-                        <form id="contactForm" class="row g-3" action="https://formspree.io/f/xqaqopnv" method="POST"
-                            enctype="multipart/form-data">
+                        <form id="contactForm" class="row g-3 needs-validation" action="https://formspree.io/f/mykejzoo"
+                            method="POST" enctype="multipart/form-data" novalidate>
                             <input type="hidden" name="_subject"
                                 value="Richiesta form dal sito www.bvexpresslogisticts.it">
                             <!-- ragione sociale -->
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 <label for="ragioneSociale" class="form-label fw-bold w-100">Ragione
                                     Sociale*</label>
                                 <input type="text" class="form-control form-control-new" id="ragioneSociale"
                                     name="ragioneSociale" required>
                                 <div class="invalid-feedback"> Per favore, inserisci la ragione sociale. </div>
                             </div>
+                            <!-- partita iva -->
+                            <div class="col-12 col-md-6">
+                                <label for="partitaIva" class="form-label fw-bold w-100">P.IVA</label>
+                                <input type="text" class="form-control form-control-new" id="partitaIva"
+                                    name="partitaIva">
+                            </div>
                             <!-- email -->
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 <label for="email" class="form-label fw-bold w-100">E-mail*</label>
                                 <input type="email" class="form-control form-control-new" id="email" name="email"
                                     required>
@@ -1102,19 +1108,12 @@
                                 </div>
                             </div>
                             <!-- recapito telefonico -->
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                                 <label for="telefono" class="form-label fw-bold w-100">Numero di Tel.*</label>
                                 <input type="tel" class="form-control form-control-new" id="telefono" name="telefono"
-                                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Formato: 1234567890" required>
-                                <div class="invalid-feedback"> Per favore, inserisci un numero di telefono valido
-                                    (es.
-                                    1234567890). </div>
-                            </div>
-                            <!-- partita iva -->
-                            <div class="col-12">
-                                <label for="partitaIva" class="form-label fw-bold w-100">P.IVA</label>
-                                <input type="text" class="form-control form-control-new" id="partitaIva"
-                                    name="partitaIva">
+                                    required>
+                                <div class="invalid-feedback"> Per favore, inserisci un numero di telefono valido.
+                                </div>
                             </div>
                             <!-- messaggio -->
                             <div class="col-12">
@@ -1123,9 +1122,10 @@
                                     rows="5"></textarea>
                             </div>
                             <!-- button submit -->
-                            <div class="col-12">
+                            <div class="col-12 text-center text-lg-start">
                                 <button type="submit"
                                     class="btn fw-bold button-submit rounded-5 px-3 py-2">INVIA</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -1573,6 +1573,30 @@
         </div>
 
     </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-5 border-0 shadow-lg" style="background-color: #1a1a1a; color: white;">
+                <div class="modal-header border-0 justify-content-center pt-5">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 80px; height: 80px; background-color: #99FF33;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.447a.247.247 0 0 1 .02-.022Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="modal-body text-center pb-5 px-4">
+                    <h2 class="fw-bold mb-3" id="successModalLabel">Invio Completato!</h2>
+                    <p class="mb-4">Grazie per averci contattato. Il nostro team ti risponderà il prima possibile.</p>
+                    <button type="button" class="btn fw-bold button-submit rounded-5 px-5 py-2"
+                        data-bs-dismiss="modal">CHIUDI</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
