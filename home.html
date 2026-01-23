@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- keen-slider css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.bvexpresslogistics.com/home.html" />
@@ -558,10 +560,10 @@
                 <div class="row gap-4">
                     <div class="col-12 text-center" id="boxService">
 
-                        <!-- Slider main container -->
-                        <swiper-container class="mySwiper" id="swiperProject" init="false">
+                        <!-- Keen Slider container -->
+                        <div class="keen-slider" id="keen-slider-project">
                             <!-- slide stoccaggio merce -->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="/img/swiper/service/img-stoccaggio.webp" class="card-img"
@@ -595,9 +597,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
+                            </div>
                             <!-- slide imballaggio prodotti -->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="img/swiper/service/img-imballaggio.webp" class="card-img"
@@ -636,9 +638,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
+                            </div>
                             <!-- slide rimessa contrassegni -->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="img/swiper/service/img-contrassegni.webp" class="card-img"
@@ -679,9 +681,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
+                            </div>
                             <!-- slide piattaforma dedicata -->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="img/swiper/service/img-piattaforma.webp" class="card-img"
@@ -736,9 +738,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
+                            </div>
                             <!-- slide spedizioni -->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="img/swiper/service/img-spedizioni.webp" class="card-img"
@@ -781,9 +783,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
+                            </div>
                             <!-- slide presa conferme in cod-->
-                            <swiper-slide>
+                            <div class="keen-slider__slide">
                                 <div class="card rounded-0">
                                     <!-- img -->
                                     <img src="img/swiper/service/img-conferme.webp" class="card-img"
@@ -866,15 +868,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </swiper-slide>
-                        </swiper-container>
+                                </swiper-slide>
+                                </swiper-container>
 
-                        <!-- cursone -->
-                        <div id="cursor-custom"></div>
 
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
         </section>
 
         <!-- section testimonial -->
@@ -1088,6 +1089,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- section contact -->
         <section class="my-5 py-5" id="sectionContact">
@@ -1657,17 +1659,16 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="js/intro/script-animation-gsap.js"></script>
 
-<!-- script gsap section service cursor -->
-<script src="js/intro/script-cursor-gsap.js"></script>
 
 <!-- script section contact gestione form submit -->
 <script src="js/intro/script-check-form.js"></script>
 
-<!-- script swiper section service -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!-- script keen-slider section service -->
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.js"></script>
 <script src="js/intro/script-swiper-section-service.js"></script>
 
 <!-- script swiper section testimonial -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script src="js/intro/script-swiper-section-testimonial.js"></script>
 
 <!-- cookies -->
