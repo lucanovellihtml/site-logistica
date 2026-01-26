@@ -228,60 +228,67 @@ section .container {
 }
 
 /* ---- section service ---- */
-#boxService .keen-slider {
+/* Flickity carousel */
+#boxService .carousel {
     width: 100%;
-    height: 100%;
+    overflow: hidden;
+    cursor: default !important;
 }
 
-#boxService .keen-slider__slide {
-    text-align: center;
-    font-size: 18px;
-    color: black;
-    background: #fff;
-    /* Mobile first: occupa quasi tutto lo schermo */
-    min-width: calc(100vw - 40px);
-    max-width: calc(100vw - 40px);
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: visible !important;
-    transition: z-index 0s;
+#boxService .carousel * {
+    cursor: default !important;
 }
 
-/* Tablet: 2 colonne */
+#boxService .carousel-cell {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+/* Tablet: dimensioni medie */
 @media (min-width: 768px) {
-    #boxService .keen-slider__slide {
-        min-width: calc(50vw - 40px);
-        max-width: calc(50vw - 40px);
-        padding: 30px;
+    #boxService .carousel-cell {
+        width: 350px;
+        min-width: 350px;
+        max-width: 350px;
+        margin-right: 30px;
     }
 }
 
-/* Desktop piccolo: 3 colonne */
+/* Desktop: dimensioni grandi */
 @media (min-width: 1024px) {
-    #boxService .keen-slider__slide {
-        min-width: 400px;
-        max-width: 400px;
-        padding: 40px;
+    #boxService .carousel-cell {
+        width: 420px;
+        min-width: 420px;
+        max-width: 420px;
+        margin-right: 40px;
     }
 }
 
-/* Desktop grande: dimensioni originali */
+/* Desktop XL: dimensioni originali */
 @media (min-width: 1400px) {
-    #boxService .keen-slider__slide {
+    #boxService .carousel-cell {
+        width: 450px;
         min-width: 450px;
         max-width: 450px;
+        margin-right: 50px;
     }
 }
 
-#boxService .keen-slider__slide:hover {
-    z-index: 20;
+#boxService .carousel-cell .card {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
-#boxService .keen-slider__slide img {
+#boxService .card:hover {
+    box-shadow: 0 0 25px 8px rgba(0, 255, 55, 0.363);
+}
+
+#boxService .card-img {
     display: block;
     width: 100%;
     height: 100%;
@@ -289,32 +296,13 @@ section .container {
     opacity: 0.0;
 }
 
-
-#boxService .card {
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-#boxService .card {
-    height: 100%;
-    min-height: 300px;
-}
-
-#boxService .card:hover {
-    /* Ombra al passaggio del mouse: azzurra */
-    box-shadow: 0 0 25px 8px rgba(0, 255, 55, 0.363);
-    /* Azzurro chiaro e più intenso */
-}
-
 #boxService .card:hover .card-img {
     opacity: 0.4;
-    /* Slightly less opaque on hover */
     transition: opacity 0.10s linear;
-    /* Transizione per l'opacità dell'immagine */
 }
 
 #boxService .card:hover {
     background-color: rgba(0, 0, 0, 0.85);
-    /* Sfondo nero opaco al passaggio del mouse */
 }
 
 #boxService .card-img-overlay {
@@ -325,7 +313,6 @@ section .container {
     color: white;
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    /* Migliora la leggibilità su sfondi scuri */
 }
 
 #boxService .card:hover .card-title {
@@ -336,6 +323,25 @@ section .container {
     fill: white;
     transition: fill 0.2s ease-in-out;
 }
+
+/* Previeni overflow verticale */
+#boxService .flickity-viewport {
+    overflow: hidden;
+    cursor: default !important;
+}
+
+#boxService .flickity-viewport * {
+    cursor: default !important;
+}
+
+/* Nascondi completamente i controlli di Flickity */
+#boxService .flickity-button,
+#boxService .flickity-prev-next-button,
+#boxService .flickity-page-dots {
+    display: none !important;
+}
+
+
 
 /* ---- section testimonial ---- */
 #boxTestimonial swiper-container {
