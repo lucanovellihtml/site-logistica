@@ -240,9 +240,9 @@ section .container {
 }
 
 #boxService .carousel-cell {
-    width: 280px;
-    min-width: 280px;
-    max-width: 280px;
+    width: 330px;
+    min-width: 330px;
+    max-width: 330px;
     margin-right: 20px;
     flex-shrink: 0;
 }
