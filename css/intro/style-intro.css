@@ -238,8 +238,8 @@ section .container {
     font-size: 18px;
     color: black;
     background: #fff;
-    min-width: 450px;
-    max-width: 450px;
+    min-width: 300px;
+    max-width: 300px;
     /* Let Keen Slider control width based on perView */
     aspect-ratio: 1 / 1;
     /* Force square shape */
@@ -251,6 +251,14 @@ section .container {
     box-sizing: border-box;
     overflow: visible !important;
     transition: z-index 0s;
+}
+
+/* Dimensioni maggiori per tablet e desktop */
+@media (min-width: 768px) {
+    #boxService .keen-slider__slide {
+        min-width: 450px;
+        max-width: 450px;
+    }
 }
 
 #boxService .keen-slider__slide:hover {
