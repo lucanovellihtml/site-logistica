@@ -2,7 +2,7 @@ const animation = { duration: 50000, easing: (t) => t };
 
 const slider = new KeenSlider("#keen-slider-project", {
     loop: true,
-    renderMode: "performance",
+    renderMode: "precision",
     drag: true,
     slides: {
         perView: "auto",
@@ -20,7 +20,9 @@ const slider = new KeenSlider("#keen-slider-project", {
         },
     },
     created(s) {
-        s.moveToIdx(5, true, animation);
+        setTimeout(() => {
+            s.moveToIdx(5, true, animation);
+        }, 50);
     },
     updated(s) {
         s.moveToIdx(s.track.details.abs + 5, true, animation);
