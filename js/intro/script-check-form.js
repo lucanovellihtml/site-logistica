@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Esempio di validazione per telefono (almeno 6 cifre)
             const telRegex = /^[0-9\s\+\-\(\)]{6,}$/;
 
+            const privacyCheck = contactForm.querySelector("#privacyCheck");
+
             let isValid = true;
 
             if (!ragioneSociale || ragioneSociale.trim().length === 0) {
@@ -34,11 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!telefono || !telRegex.test(telefono)) {
                 isValid = false;
             }
+            if (privacyCheck && !privacyCheck.checked) {
+                isValid = false;
+            }
 
             if (!isValid) {
                 event.preventDefault();
                 event.stopPropagation();
-                alert("Errore nella validazione dei dati. Per favore controlla i campi inseriti.");
+                // Determina il messaggio di errore in base alla lingua (semplice check)
+                const isEnglish = document.documentElement.lang === "en";
+                const errorMsg = isEnglish
+                    ? "Validation error. Please check the fields and accept the privacy policy."
+                    : "Errore nella validazione dei dati. Per favore controlla i campi e accetta l'informativa sulla privacy.";
+                alert(errorMsg);
                 return;
             }
 
