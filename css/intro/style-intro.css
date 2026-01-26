@@ -238,23 +238,39 @@ section .container {
     font-size: 18px;
     color: black;
     background: #fff;
-    min-width: 300px;
-    max-width: 300px;
-    /* Let Keen Slider control width based on perView */
+    /* Mobile first: occupa quasi tutto lo schermo */
+    min-width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
     aspect-ratio: 1 / 1;
-    /* Force square shape */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 20px;
     box-sizing: border-box;
     overflow: visible !important;
     transition: z-index 0s;
 }
 
-/* Dimensioni maggiori per tablet e desktop */
+/* Tablet: 2 colonne */
 @media (min-width: 768px) {
+    #boxService .keen-slider__slide {
+        min-width: calc(50vw - 40px);
+        max-width: calc(50vw - 40px);
+        padding: 30px;
+    }
+}
+
+/* Desktop piccolo: 3 colonne */
+@media (min-width: 1024px) {
+    #boxService .keen-slider__slide {
+        min-width: 400px;
+        max-width: 400px;
+        padding: 40px;
+    }
+}
+
+/* Desktop grande: dimensioni originali */
+@media (min-width: 1400px) {
     #boxService .keen-slider__slide {
         min-width: 450px;
         max-width: 450px;
